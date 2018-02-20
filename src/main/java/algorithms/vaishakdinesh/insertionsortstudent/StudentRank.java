@@ -1,11 +1,8 @@
 package algorithms.vaishakdinesh.insertionsortstudent;
 
 public class StudentRank {
-	Student[] roster;
-	int size;
 	
-    public StudentRank(int n) {
-		super();
+	public StudentRank(int n) {
 		roster = new Student[n];
 		size = 0;
 	}
@@ -13,8 +10,8 @@ public class StudentRank {
     public Student[] getRoster() {
 		return roster;
 	}
-
-	public void addStudent(Student s) {
+    
+    public void addStudent(Student s) {
     		roster[size++] = s;
     }
     
@@ -23,6 +20,7 @@ public class StudentRank {
     }
     
     /**
+     * Uses insertion sort to order the array of students
      * 
      * @param roster the list of all the students to be sorted
      */
@@ -44,8 +42,7 @@ public class StudentRank {
      * @return true if student 1 is "greater" than student 2
      */
     public static boolean higher(Student s1, Student s2) {
-    	//TODO Implement the higher() function used by your sort method. Hint: it should use the Student class's compareTo() method
-		return s1.compareTo(s2)>0;
+    	return s1.compareTo(s2)>0;
 	}
     
     /**
@@ -59,5 +56,8 @@ public class StudentRank {
     		array[i] = array[j];
     		array[j] = s;
     }
+    
+    private Student[] roster;
+    private int size;
 
 }

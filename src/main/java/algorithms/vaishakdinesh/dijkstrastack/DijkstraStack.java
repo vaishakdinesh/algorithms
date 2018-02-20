@@ -9,6 +9,7 @@ public class DijkstraStack<Item>{
 	 }
 	  
 	/**
+	 * Pushes an element onto our stack
 	 * 
 	 * @param element to be pushed into the stack
 	 */
@@ -20,6 +21,7 @@ public class DijkstraStack<Item>{
 	 }
 	 
 	 /**
+	  * Pops an item from our stack
 	  * 
 	  * @return returns the item at the top of the stack
 	  */
@@ -63,6 +65,12 @@ public class DijkstraStack<Item>{
 		 return size;
 	 }
 	 
+	 /**
+	  * 
+	  * @param operators the stack that contains the operators
+	  * @param values the stack that contains the operands
+	  * @param expr the expression to be evaluated
+	  */
 	 public static void evaluate(DijkstraStack<String> operators,DijkstraStack<Integer> values,String expr){
 		 String[] tokens = expr.split(" ");
 				 
@@ -94,7 +102,11 @@ public class DijkstraStack<Item>{
 			 }
 		 }
 	 }
-	 
+	 /**
+	  * 
+	  * @param source the initial array to be grown
+	  * @param size the size to be grown to
+	  */
 	 private void grow(Item[] source, int size){
 		 this.size = size;
 		 arr = growTheArray(source, size); 

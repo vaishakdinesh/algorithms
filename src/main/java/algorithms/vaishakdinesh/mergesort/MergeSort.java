@@ -1,9 +1,8 @@
 package algorithms.vaishakdinesh.mergesort;
 
 public class MergeSort<X extends Comparable<X>> {
-
-    // This class should not be instantiated.
-    private MergeSort() { }
+	
+	private MergeSort() { }
 
     public static <X extends Comparable<X>> void merge(X[] a, X[] aux, int lo, int mid, int hi) {
     	// copy to aux[]
@@ -13,7 +12,7 @@ public class MergeSort<X extends Comparable<X>> {
         // merge back to a[]
         int i = lo, j = mid+1;
         for (int k = lo; k <= hi; k++) {
-            if      (i > mid)              a[k] = aux[j++];  // this copying is unneccessary
+            if      (i > mid)              a[k] = aux[j++];
             else if (j > hi)               a[k] = aux[i++];
             else if (less(aux[j], aux[i])) a[k] = aux[j++];
             else                           a[k] = aux[i++];

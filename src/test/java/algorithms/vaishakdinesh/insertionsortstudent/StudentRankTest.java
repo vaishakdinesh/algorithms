@@ -35,7 +35,7 @@ public class StudentRankTest     extends TestCase{
     		ranking.addStudent(new Student("Tina", 5, 2.7));
     		ranking.addStudent(new Student("George", 6, 3.3));
     		ranking.rankStudents();
-    		assertEquals(ranking.roster[0].toString(), "Jim");
+    		assertEquals(ranking.getRoster()[0].toString(), "Jim");
     		
     }
 
@@ -48,7 +48,7 @@ public class StudentRankTest     extends TestCase{
 		ranking.addStudent(new Student("Tina", 5, 2.7));
 		ranking.addStudent(new Student("George", 6, 3.3));
 		ranking.rankStudents();
-		assertEquals(ranking.roster[5].toString(), "Tina");
+		assertEquals(ranking.getRoster()[5].toString(), "Tina");
 		
     }
     
@@ -61,7 +61,7 @@ public class StudentRankTest     extends TestCase{
 		ranking.addStudent(new Student("Tina", 5, 2.7));
 		ranking.addStudent(new Student("George", 6, 3.3));
 		ranking.rankStudents();
-		assertEquals(ranking.roster[2].toString(), "George");
+		assertEquals(ranking.getRoster()[2].toString(), "George");
 		
     }
 }
